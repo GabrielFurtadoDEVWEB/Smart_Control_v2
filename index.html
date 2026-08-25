@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Porta de Entrada</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Caixa Principal do Login -->
+    <div class="login-container">
+        <img src="assets/Images/Logo.png" alt="logo Smart Control" class="Logo">
+        
+        <h2>Login</h2>
+
+        <form method="get" action="dashboard.html">
+            <div class="input-group">
+                <label for="email">E-mail</label>
+                <input type="email" name="email" id="email" required placeholder="Digite seu e-mail">
+            </div>
+            
+            <div class="input-group">
+                <label for="senha">Senha</label>
+                <input type="password" name="senha" id="senha" minlength="8" required placeholder="Digite sua senha">
+            </div>
+
+            <button type="submit" class="btn-entrar">Entrar</button>
+        </form>
+
+        <form method="get" action="cadastro.html">
+             <button type="submit" class="btn-cadastrar">Cadastrar-se</button>
+        </form>
+    </div>
+
+    <!-- Rodapé com o Mapa fora da caixa de login -->
+    <footer>
+        <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.667461569666!2d-41.53207912502988!3d-2.911706697064687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ec19f2c83cb9c1%3A0x3d9a3725062bfd22!2sPraia%20do%20Arrombado!5e0!3m2!1spt-BR!2sbr!4v1785242869541!5m2!1spt-BR!2sbr"
+        title="Localização:"
+        width="400"
+        height="300"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin">
+        </iframe>
+    </footer>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

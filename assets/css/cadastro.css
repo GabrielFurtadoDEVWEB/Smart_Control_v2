@@ -1,0 +1,147 @@
+/* Reset padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Fundo da tela inteira */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url("../Images/wallpaper.png") center center/cover no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    padding: 40px 20px;
+}
+
+/* Película escura sobre o fundo */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+    z-index: 1;
+}
+
+/* Caixa Transparente do Cadastro (mesmo padrão do login) */
+.login-container {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.18); 
+    backdrop-filter: blur(8px);             
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 40px 30px;
+    border-radius: 20px;   
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+}
+
+/* Configuração da Logo */
+.Logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+/* Título em Branco */
+.login-container h2 {
+    color: white;
+    margin-bottom: 25px;
+    font-size: 2rem;
+}
+
+/* Grupos de campos (Label + Input) */
+.input-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+/* Texto das Labels em Branco */
+.input-group label {
+    display: block;
+    font-size: 15px;
+    color: white;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+/* Inputs e Select */
+.input-group input,
+.input-group select {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    padding: 0 15px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+    background-color: white;
+    color: #111;
+}
+
+/* Grupo do checkbox (Termos de uso) */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox-group input {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+.checkbox-group label {
+    margin-bottom: 0;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+/* Estilização dos Botões */
+button {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Botão Criar (equivalente ao Entrar) */
+.btn-entrar {
+    background-color: #111;
+    color: white;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.btn-entrar:hover {
+    background-color: #2b2b2b;
+}
+
+/* Botão Voltar (equivalente ao Cadastrar-se) */
+.btn-cadastrar {
+    background: transparent;
+    color: white;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.btn-cadastrar:hover {
+    text-decoration: underline;
+}
+
+footer {
+    display: none;
+}

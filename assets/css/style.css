@@ -1,0 +1,130 @@
+/* Reset padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Fundo da tela inteira */
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url("../Images/wallpaper.png") center center/cover no-repeat;
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+}
+
+/* Película escura sobre o fundo */
+body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.25);
+    z-index: 1;
+}
+
+/* Caixa Transparente do Login (Estilo do segundo código) */
+.login-container {
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.18); /* Transparência */
+    backdrop-filter: blur(8px);             /* Efeito de desfoque */
+    -webkit-backdrop-filter: blur(8px);     /* Suporte para Safari */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Borda sutil */
+    padding: 40px 30px;
+    border-radius: 20px;                     /* Cantos mais arredondados */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 420px;
+    text-align: center;
+}
+
+/* Configuração da Logo */
+.Logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+/* Título em Branco */
+.login-container h2 {
+    color: white;
+    margin-bottom: 25px;
+    font-size: 2rem;
+}
+
+/* Grupos de campos (Label + Input) */
+.input-group {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+/* Texto das Labels em Branco */
+.input-group label {
+    display: block;
+    font-size: 15px;
+    color: white;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+/* Inputs do Segundo Código */
+.input-group input {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    padding: 0 15px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+    background-color: white;
+}
+
+.input-group input:focus {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+/* Estilização dos Botões */
+button {
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Botão Entrar Escuro */
+.btn-entrar {
+    background-color: #111;
+    color: white;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.btn-entrar:hover {
+    background-color: #2b2b2b;
+}
+
+/* Botão Cadastrar Transparente */
+.btn-cadastrar {
+    background: transparent;
+    color: white;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.btn-cadastrar:hover {
+    text-decoration: underline;
+}
+footer{
+    display: none;
+}
