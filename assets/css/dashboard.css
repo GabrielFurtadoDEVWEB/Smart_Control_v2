@@ -32,9 +32,18 @@ header{
     box-shadow:0 1px 4px rgba(0,0,0,.1);
 }
 
-header img{
-    width:50px;
-    border-radius:8px;
+/* logo clara aparece por padrão, logo escura fica escondida */
+.logo-escuro{
+    display:none;
+}
+
+/* no modo escuro, inverte */
+body.dark-mode .logo-claro{
+    display:none;
+}
+
+body.dark-mode .logo-escuro{
+    display:block;
 }
 
 
@@ -112,6 +121,56 @@ header img{
   opacity: 1;
 }
 
+/* =========================
+   DARK MODE
+========================= */
+body.dark-mode{
+    background:#181a1f;
+    color:#e7e7ea;
+}
+
+body.dark-mode header{
+    background:#22252c;
+    box-shadow:0 1px 4px rgba(0,0,0,.4);
+}
+
+body.dark-mode #campoBusca{
+    background:#2c2f38;
+    color:#e7e7ea;
+    border:1px solid #3a3d47;
+}
+
+body.dark-mode .navbar a{
+    color:#d5d5da;
+}
+
+body.dark-mode .navbar a:hover{
+    color:#fff;
+}
+
+body.dark-mode table{
+    background:#22252c;
+    box-shadow:0 1px 4px rgba(0,0,0,.4);
+}
+
+body.dark-mode th,
+body.dark-mode td{
+    border-top:1px solid #33363f;
+}
+
+body.dark-mode th{
+    color:#9a9aa2;
+}
+
+body.dark-mode caption{
+    color:#e7e7ea;
+}
+
+body.dark-mode footer,
+body.dark-mode footer a,
+body.dark-mode main footer nav a{
+    color:#9a9aa2;
+}
 
 /* =========================
    MENU DE NAVEGAÇÃO
